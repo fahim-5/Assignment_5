@@ -373,3 +373,50 @@
 }
 
 
+
+.history-list li {
+  padding: 6px;
+  border-bottom: 1px solid #ddd;
+  list-style: none;
+}
+
+
+
+
+/* Call History List Items */
+.history-list li {
+  display: flex;
+  justify-content: space-between; /* text left, time right */
+  padding: 6px 10px;
+  border-bottom: 1px solid #ddd;
+  list-style: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.history-time {
+  color: #555;
+  font-weight: bold;
+}
+
+
+/* Centered Alert Messages - Larger Version */
+.alert {
+  position: fixed;
+  top: 50%; /* vertical center */
+  left: 50%; /* horizontal center */
+  transform: translate(-50%, -50%); /* center precisely */
+  background-color: #4caf50; /* green for success */
+  color: white;
+  padding: 30px 60px; /* bigger box */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 20px; /* bigger text */
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  text-align: center;
+  min-width: 300px; /* wider box */
+  min-height: 80px; /* taller box */
+}
