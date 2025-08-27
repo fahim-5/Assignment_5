@@ -6,14 +6,16 @@ let heartCount = 0;
 favButtons.forEach((button) => {
   button.addEventListener("click", () => {
     button.classList.toggle("active");
-    const img = button.querySelector("img");
+    const icon = button.querySelector(".fav-icon-heart");
 
     if (button.classList.contains("active")) {
       heartCount++;
-      img.src = "assets/heart-filled.png";
+      icon.classList.remove("fa-regular");
+      icon.classList.add("fa-solid");
     } else {
       heartCount--;
-      img.src = "assets/heart.png";
+      icon.classList.remove("fa-solid");
+      icon.classList.add("fa-regular");
     }
 
     heartCountEl.textContent = heartCount;
@@ -119,14 +121,3 @@ function showAlert(message, success = true) {
     }, 300);
   }, 2000);
 }
-
-button.addEventListener("click", () => {
-  button.classList.toggle("active");
-  const img = button.querySelector("img");
-
-  if (button.classList.contains("active")) {
-    img.src = "assets/heart-filled.png"; // filled heart
-  } else {
-    img.src = "assets/heart.png"; // outline heart
-  }
-});

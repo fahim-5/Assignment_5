@@ -154,8 +154,11 @@
   padding: 3px 10px;
   border-radius: 15px;
   font-size: 12px;
+  display: inline-block; 
+  width: auto; 
+  margin-right: auto; 
+  align-self: flex-start; 
 }
-
 
 .card-footer {
   margin-top: auto;
@@ -441,4 +444,16 @@
 
 #copy-count:hover {
   background-color: #45a049; /* slightly darker green on hover */
+}
+
+
+.fav-icon-heart {
+  color: white;
+  -webkit-text-stroke: 1px black;
+  font-size: 1.2rem;
+}
+
+.fav-btn.active .fav-icon-heart {
+  color: red;
+  -webkit-text-stroke: 0px;
 }
