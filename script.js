@@ -62,7 +62,7 @@ callButtons.forEach((button) => {
     const serviceNumber = card.querySelector("h2").textContent;
 
     if (coins < 20) {
-      showAlert("Not enough coins to make a call!", false);
+      showAlert("Not enough coins! Minimum 20 required to call.", false);
       return;
     }
 

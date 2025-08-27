@@ -99,9 +99,6 @@
   line-height: 1.5;
 }
 
-
-
-
 /* Main Section Layout */
 .main-section {
   display: grid;
@@ -126,6 +123,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  position: relative;
 }
 
 .card-icon {
@@ -230,13 +228,6 @@
   border-bottom: 1px solid #eee;
 }
 
-
-
-.card {
-  position: relative; 
-}
-
-
 .fav-btn  {
   position: absolute;
   top: 10px;
@@ -255,138 +246,16 @@
   filter: none;             
 }
 
-
 .fav-btn.active {
   transform: scale(1.2); /* small pop effect */
   transition: transform 0.2s;
 }
-
-
-/* Mobile responsiveness */
-
-
-/* Mobile Responsive Design */
-@media (max-width: 768px) {
-  /* Navbar */
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 15px;
-  }
-
-  .nav-left {
-    gap: 8px;
-    margin-bottom: 10px;
-  }
-
-  .nav-title {
-    font-size: 16px;
-  }
-
-  .nav-right {
-    width: 100%;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  .nav-item {
-    padding: 5px 8px;
-    font-size: 13px;
-  }
-
-  .copy-btn {
-    padding: 5px 12px;
-    font-size: 13px;
-  }
-
-  /* Banner */
-  .banner {
-    padding: 25px 15px;
-  }
-
-  .banner-logo {
-    width: 70px;
-    margin-bottom: 15px;
-  }
-
-  .banner-title {
-    font-size: 22px;
-  }
-
-  .banner-subtitle {
-    font-size: 13px;
-    padding: 0 5px;
-  }
-
-  /* Layout */
-  .main-section {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 15px;
-  }
-
-  /* Cards */
-  .cards {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .card {
-    padding: 12px;
-  }
-
-  .card h3 {
-    font-size: 14px;
-  }
-
-  .card p {
-    font-size: 12px;
-  }
-
-  .card h2 {
-    font-size: 18px;
-  }
-
-  .badge {
-    font-size: 11px;
-    padding: 2px 8px;
-  }
-
-  .fav-btn {
-    top: 8px;
-    right: 8px;
-    padding: 5px;
-  }
-
-  /* History */
-  .history {
-    padding: 12px;
-  }
-
-  .history-header h3 {
-    font-size: 14px;
-  }
-
-  .clear-btn {
-    padding: 4px 10px;
-    font-size: 12px;
-  }
-
-  .history-list {
-    font-size: 13px;
-  }
-}
-
-
 
 .history-list li {
   padding: 6px;
   border-bottom: 1px solid #ddd;
   list-style: none;
 }
-
-
-
 
 /* Call History List Items */
 .history-list li {
@@ -403,7 +272,6 @@
   color: #555;
   font-weight: bold;
 }
-
 
 /* Centered Alert Messages - Larger Version */
 .alert {
@@ -426,9 +294,6 @@
   min-height: 80px; /* taller box */
 }
 
-
-
-
 /* Navbar Copy Button */
 #copy-count {
   background-color: #4caf50; /* green */
@@ -446,7 +311,6 @@
   background-color: #45a049; /* slightly darker green on hover */
 }
 
-
 .fav-icon-heart {
   color: white;
   -webkit-text-stroke: 1px black;
@@ -456,4 +320,230 @@
 .fav-btn.active .fav-icon-heart {
   color: red;
   -webkit-text-stroke: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  
+  body {
+    font-size: 14px;
+  }
+  
+  
+  .navbar {
+    padding: 8px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .nav-logo {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .nav-title {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+  
+  .nav-right {
+    gap: 10px;
+  }
+  
+  .nav-item {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  #copy-count {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+  
+  .banner {
+    padding: 25px 15px;
+  }
+  
+  .banner-logo {
+    width: 70px;
+    margin-bottom: 15px;
+  }
+  
+  .banner-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .banner-subtitle {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  .main-section {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 25px;
+  }
+  
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .card {
+    padding: 15px 12px;
+  }
+  
+  .card-icon {
+    width: 35px;
+    margin-bottom: 8px;
+  }
+  
+  .card h3 {
+    font-size: 15px;
+  }
+  
+  .card h2 {
+    font-size: 20px;
+  }
+  
+  .card-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .copy-btn, .call-btn {
+    padding: 8px;
+    width: 100%;
+  }
+  
+  .history {
+    order: -1; 
+    margin-bottom: 10px;
+  }
+  
+  .history-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .history-header h3 {
+    font-size: 16px;
+  }
+  
+  .clear-btn {
+    align-self: flex-end;
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+  
+  .history-list {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .history-list li {
+    padding: 8px 5px;
+    font-size: 13px;
+  }
+  
+  .fav-btn {
+    top: 8px;
+    right: 8px;
+    padding: 5px;
+  }
+  
+  .fav-icon-heart {
+    font-size: 1rem;
+  }
+  
+  .alert {
+    padding: 20px 30px;
+    font-size: 16px;
+    min-width: 250px;
+    min-height: 60px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 6px 10px;
+  }
+  
+  .nav-title {
+    font-size: 12px;
+  }
+  
+  .nav-item span {
+    font-size: 11px;
+  }
+  
+  .banner-title {
+    font-size: 18px;
+  }
+  
+  .banner-subtitle {
+    font-size: 12px;
+  }
+  
+  .card {
+    padding: 12px 10px;
+  }
+  
+  .card h3 {
+    font-size: 14px;
+  }
+  
+  .card p {
+    font-size: 12px;
+  }
+  
+  .card h2 {
+    font-size: 18px;
+  }
+  
+  .badge {
+    font-size: 11px;
+    padding: 2px 8px;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .history {
+    order: 0; 
+  }
+}
+
+@media (max-width: 768px) {
+  button, .copy-btn, .call-btn, .fav-btn {
+    min-height: 44px; 
+  }
+  
+  
+  .card h2 {
+    font-size: 22px !important;
+  }
 }
